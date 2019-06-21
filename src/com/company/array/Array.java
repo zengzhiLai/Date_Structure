@@ -117,6 +117,80 @@ public class Array {
         data[index] = e;
     }
 
+    /**
+     * 查找数组中是否有元素e
+     *
+     * @param e
+     * @return
+     */
+    public boolean contains(int e) {
+        for (int i = 0; i < size; i++) {
+            if (data[i] == e)
+                return true;
+        }
+        return false;
+    }
+
+    /**
+     * 查找元数组中元素e所在的索引，如不存在则返回-1
+     *
+     * @param e
+     * @return
+     */
+    public int find(int e) {
+        for (int i = 0; i < size; i++) {
+            if (data[i] == e)
+                return i;
+        }
+        return -1;
+    }
+
+    /**
+     * 从数组中删除index位置的元素，并返回删除的元素
+     *
+     * @param index
+     * @return
+     */
+    public int remove(int index) {
+        if (index < 0 || index > size)
+            throw new IllegalArgumentException("Remove is failed. Index is illegal.");
+        int ret = data[index];
+        for (int i = index + 1; i < size; i++) {
+            data[i - 1] = data[i];
+        }
+        size--;
+        return ret;
+    }
+
+    /**
+     * 从数组中删除第一个元素，并返回删除的元素
+     *
+     * @return
+     */
+    public int removeFirst() {
+        return remove(0);
+    }
+
+    /**
+     * 从数组中删除最后一个元素，并返回删除的元素
+     *
+     * @return
+     */
+    public int removeLast() {
+        return remove(size - 1);
+    }
+
+    /**
+     * 从数组中删除元素e (仅删除一个)
+     * @param e
+     */
+    public void removeElement(int e) {
+        int index = find(e);
+        if (index != -1) {
+            remove(index);
+        }
+    }
+
     //重写方法 加Override注释可检查重写的方法是否正确
     @Override
     public String toString() {
