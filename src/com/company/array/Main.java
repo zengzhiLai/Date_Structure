@@ -1,6 +1,5 @@
 package com.company.array;
 
-import java.util.Arrays;
 
 /**
  * @author ：赖增智
@@ -24,7 +23,9 @@ public class Main {
                 System.out.println(score);
         */
 
-        Array arr = new Array(20);
+        // Array arr = new Array(20);
+        // 泛型的测试
+        ArrayGenerics<Integer> arr= new ArrayGenerics<>(20);
         for (int i = 0; i < 10; i++) {
             arr.addLast(i);
         }
