@@ -1,4 +1,4 @@
-package com.company.array;
+package com.company.stack;
 
 /**
  * 数组 泛型Generics
@@ -37,20 +37,21 @@ public class Array<E> {
     }
 
     /**
-     * 返回数组是否为空
-     * @return
-     */
-    public boolean isEmpty(){
-        return size==0;
-    }
-
-    /**
      * 获取数组的容量
      *
      * @return
      */
     public int getCapacity() {
         return data.length;
+    }
+
+    /**
+     * 返回数组是否为空
+     *
+     * @return
+     */
+    public boolean isEmpty() {
+        return size == 0;
     }
 
     /**
@@ -103,6 +104,24 @@ public class Array<E> {
         if (index < 0 || index > size)
             throw new IllegalArgumentException("Get failed,index is illegal.");
         return data[index];
+    }
+
+    /**
+     * 获取第一个元素
+     *
+     * @return
+     */
+    public E getFirst() {
+        return get(0);
+    }
+
+    /**
+     * 获取最后一个元素
+     *
+     * @return
+     */
+    public E getLast() {
+        return get(size - 1);
     }
 
     /**

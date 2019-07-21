@@ -1,6 +1,5 @@
 package com.company.array;
 
-
 /**
  * @author ：赖增智
  * @date ：Created in 2019-6-16 13:34
@@ -25,7 +24,7 @@ public class Main {
 
         // Array arr = new Array(20);
         // 泛型的测试
-        Array<Integer> arr= new Array<>(10);
+        Array<Integer> arr = new Array<>(10);
         for (int i = 0; i < 10; i++) {
             arr.addLast(i);
         }
