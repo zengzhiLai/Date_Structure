@@ -25,7 +25,7 @@ public class Main {
 
         // Array arr = new Array(20);
         // 泛型的测试
-        ArrayGenerics<Integer> arr= new ArrayGenerics<>(20);
+        Array<Integer> arr= new Array<>(10);
         for (int i = 0; i < 10; i++) {
             arr.addLast(i);
         }
