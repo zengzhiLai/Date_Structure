@@ -19,7 +19,15 @@ public interface Queue<E> {
      */
     E getFront();
 
+    /**
+     * 获取队列的元素个数
+     * @return
+     */
     int getSize();
 
+    /**
+     * 队列是否为空
+     * @return
+     */
     boolean isEmpty();
 }
