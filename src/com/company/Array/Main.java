@@ -1,4 +1,4 @@
-package com.company.array;
+package com.company.Array;
 
 /**
  * @author ：赖增智

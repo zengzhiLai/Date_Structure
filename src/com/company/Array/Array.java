@@ -1,4 +1,4 @@
-package com.company.array;
+package com.company.Array;
 
 /**
  * 数组 泛型Generics
